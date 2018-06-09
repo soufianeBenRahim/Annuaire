@@ -5,8 +5,8 @@
  */
 package com.xpertsoft.annuaireminesante;
 
-import Metier.Bdd;
-import Metier.MetierAnnuair;
+import Metier.BDD;
+import Metier.AnnuaireDAO;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.rmi.Naming;
@@ -24,7 +24,7 @@ import javax.swing.filechooser.FileFilter;
  * @author Soufiane
  */
 public class Server {
-static private Bdd gestionBdd = new Bdd();
+static private BDD gestionBdd = new BDD();
   static private JFileChooser bddChooser = new JFileChooser(".");
    static  private FileFilter datFilter = null;
     /**
@@ -41,7 +41,7 @@ static private Bdd gestionBdd = new Bdd();
             File file = bddChooser.getSelectedFile();
             gestionBdd.deconnexion();
             gestionBdd.initialiserConnexion(file.getAbsolutePath());
-            MetierAnnuair Metier=new MetierAnnuair(gestionBdd);
+            AnnuaireDAO Metier=new AnnuaireDAO(gestionBdd);
             
             System.out.println("demarage de service annuaire ...");
             LocateRegistry.createRegistry(1090);

@@ -1,6 +1,6 @@
 package com.xpertsoft.annuaireminesante;
 
-import Metier.MetierAnnuair;
+import Metier.AnnuaireDAO;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
@@ -10,11 +10,11 @@ import java.rmi.server.UnicastRemoteObject;
  * @author Soufiane
  */
 public class ImplimentAnnuair  extends UnicastRemoteObject implements IAnnuair{
-private MetierAnnuair Metier;
+private AnnuaireDAO Metier;
 public ImplimentAnnuair() throws RemoteException{
         super();
     }
-       public ImplimentAnnuair(MetierAnnuair _Metier) throws RemoteException{
+       public ImplimentAnnuair(AnnuaireDAO _Metier) throws RemoteException{
         super();
         Metier=_Metier;
     }

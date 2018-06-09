@@ -17,11 +17,11 @@ import java.util.logging.Logger;
  *
  * @author Soufiane
  */
-public class MetierAnnuair {
+public class AnnuaireDAO {
 
-    private Bdd GestionBdd;
+    private BDD GestionBdd;
 
-    public MetierAnnuair(Bdd _GestionBdd) {
+    public AnnuaireDAO(BDD _GestionBdd) {
         GestionBdd = _GestionBdd;
     }
     public  boolean login(String Psudo,String Pass) {
@@ -34,7 +34,7 @@ public class MetierAnnuair {
                 return true;
             }
         } catch (SQLException ex) {
-            Logger.getLogger(MetierAnnuair.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AnnuaireDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
     }
@@ -46,7 +46,7 @@ public class MetierAnnuair {
                 return rs.getString("IP");
             }
         } catch (SQLException ex) {
-            Logger.getLogger(MetierAnnuair.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(AnnuaireDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
