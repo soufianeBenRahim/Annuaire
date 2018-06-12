@@ -17,11 +17,11 @@ import javax.swing.DefaultListModel;
 
 
 
-public class BDD {
+public class Bdd {
 
     private Connection conn = null;
 
-    public BDD() {
+    public Bdd() {
     }
 
     public void initialiserConnexion(String fichierConfig) throws Exception {
@@ -54,7 +54,7 @@ System.out.println("password"+propBD.getProperty("password"));
            
             ps = conn.prepareStatement(Query);
         } catch (SQLException ex) {
-            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Bdd.class.getName()).log(Level.SEVERE, null, ex);
         }
         return ps;
     }
@@ -66,7 +66,7 @@ System.out.println("password"+propBD.getProperty("password"));
             
             return dbStat.executeQuery(sql);
         } catch (SQLException ex) {
-            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Bdd.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
@@ -80,7 +80,7 @@ System.out.println("password"+propBD.getProperty("password"));
             }
             
         } catch (SQLException ex) {
-            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Bdd.class.getName()).log(Level.SEVERE, null, ex);
         }
  return i;
  }
@@ -93,7 +93,7 @@ System.out.println("password"+propBD.getProperty("password"));
             Statement dbStat = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
             return dbStat.executeQuery(sql);
         } catch (SQLException ex) {
-            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Bdd.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
@@ -104,7 +104,7 @@ System.out.println("password"+propBD.getProperty("password"));
             boolean b = dbStat.execute(sql);
             return b;
         } catch (SQLException ex) {
-            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Bdd.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
     }
@@ -119,7 +119,7 @@ System.out.println("password"+propBD.getProperty("password"));
             int b = dbStat.executeUpdate(sql);
             return (b>0);
         } catch (SQLException ex) {
-            Logger.getLogger(BDD.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Bdd.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
     }
