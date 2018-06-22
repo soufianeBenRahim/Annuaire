@@ -5,7 +5,7 @@
  */
 package com.xpertsoft.annuaireminesante;
 
-import Metier.BDD;
+import Metier.Bdd;
 import Metier.AnnuaireDAO;
 import java.io.File;
 import java.net.MalformedURLException;
@@ -24,7 +24,7 @@ import javax.swing.filechooser.FileFilter;
  * @author Soufiane
  */
 public class Server {
-static private BDD gestionBdd = new BDD();
+static private Bdd gestionBdd = new Bdd();
   static private JFileChooser bddChooser = new JFileChooser(".");
    static  private FileFilter datFilter = null;
     /**

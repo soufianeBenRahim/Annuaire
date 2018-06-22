@@ -19,9 +19,9 @@ import java.util.logging.Logger;
  */
 public class AnnuaireDAO {
 
-    private BDD GestionBdd;
+    private Bdd GestionBdd;
 
-    public AnnuaireDAO(BDD _GestionBdd) {
+    public AnnuaireDAO(Bdd _GestionBdd) {
         GestionBdd = _GestionBdd;
     }
     public  boolean login(String Psudo,String Pass) {
