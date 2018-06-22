@@ -16,7 +16,7 @@ import java.rmi.RemoteException;
  */
 public interface IAnnuair extends Remote{
      
-    public boolean Login(String Psudo,String Pass) throws RemoteException;
+    public boolean Login(String Psudo,String Pass,String UsIP) throws RemoteException;
     public boolean Desconect(String Psudo,String Pass) throws RemoteException;
     public String GetIPUser(String Psudo) throws RemoteException;
 }
